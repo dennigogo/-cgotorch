@@ -1,0 +1,8 @@
+**/.vscode
+**/.idea
+
+internal/cgolibrary/library
+internal/cgolibrary/libtorch
+
+**/*.so
+**/*.o
