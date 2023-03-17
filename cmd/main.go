@@ -1,7 +1,16 @@
 package main
 
-import "github.com/dennigogo/cgotorch/internal/cgolibrary"
+import (
+	"log"
+
+	"github.com/dennigogo/cgotorch/pkg/device"
+)
 
 func main() {
-	cgolibrary.Test()
+	d, err := device.New()
+	if err != nil {
+		panic(err)
+	}
+
+	log.Printf("device %+v | type = %s", d.Device(), d.TypeDevice())
 }

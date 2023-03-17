@@ -6,15 +6,6 @@ package cgolibrary
 // #include "cgolibrary.h"
 import "C"
 
-import (
-	"fmt"
-)
-
-func Test() {
-	if C.IsCUDAAvailable() == C.bool(true) {
-		fmt.Printf("Is CUDA\n")
-		return
-	}
-
-	fmt.Printf("Is Not CUDA\n")
+func IsCUDAAvailable() bool {
+	return C.IsCUDAAvailable() == C.bool(true)
 }
